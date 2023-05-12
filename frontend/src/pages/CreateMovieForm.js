@@ -65,7 +65,7 @@ const CreateMovieForm = () => {
 						name='year'
 						value={year}
 						onChange={onChange}
-						type="text" className="form-control" required/>
+						type="number" className="form-control" required/>
 					</div>
 					<div className="form-group">
 						<label>Budget (Million)</label>
@@ -73,7 +73,7 @@ const CreateMovieForm = () => {
 						name='budget'
 						value={budget}
 						onChange={onChange}
-						type="text" className="form-control" required/>
+						type="number" className="form-control" required/>
 					</div>
 					<div className="form-group">
 						<label>Genre</label>

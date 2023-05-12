@@ -7,6 +7,7 @@ import {useSelector } from 'react-redux'
 const Profile = () => {
     const navigate  = useNavigate()
     const { user } = useSelector((state)=> state.auth)
+    const { movies } = useSelector((state)=> state.movie)
 
     useEffect(()=> {
         if(!user){
@@ -69,7 +70,7 @@ const Profile = () => {
                             </strong>
                         </td>
                         <td className="text-primary">
-                            4 
+                           { movies.length > 0 ? movies.length : 'No movie added yet' }
                         </td>
                     </tr>                                  
                 </tbody>

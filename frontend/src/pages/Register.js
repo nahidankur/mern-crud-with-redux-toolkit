@@ -29,7 +29,7 @@ const Register = () => {
 		 }))
 	}
 
-const onSubmit = (e)=> {
+const onSubmit =  (e)=> {
       e.preventDefault()
 
 	  if(password !== password2) {
@@ -38,8 +38,7 @@ const onSubmit = (e)=> {
 		const userData = {
 			name, email, password
 		}
-		dispatch(register(userData))
-		toast.success('Registration Successful')
+	 dispatch(register(userData))
 	  }
 
 }
@@ -49,11 +48,12 @@ const onSubmit = (e)=> {
 			toast.error(message)
 		}
 		if(isSuccess || user) {
+			toast.success('Register Successful')
 			navigate('/dashboard')
 		}
 		
 		dispatch(reset())
-	 }, [user, navigate, dispatch, isError, isSuccess, message])
+	 }, [user, navigate, dispatch, isError, message])
 
 	if(isLoading){
 		return <Spinner />

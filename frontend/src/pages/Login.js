@@ -33,7 +33,6 @@ const onSubmit = (e)=> {
 		const userData = {
 			 email, password
 		}
-		toast.success('Login Successful')
 		dispatch(login(userData))
 		
 
@@ -44,13 +43,14 @@ const onSubmit = (e)=> {
 			toast.error(message)
 		}
 		if(isSuccess || user) {
+			toast.success('Login Successful')
 			navigate('/dashboard')
 			
 		}
 	
 		
 		dispatch(reset())
-	 }, [user, navigate, dispatch, isError, isSuccess,message])
+	 }, [user, navigate, dispatch, isError,message])
 
 	if(isLoading){
 		return <Spinner />

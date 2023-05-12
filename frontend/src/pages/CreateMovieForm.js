@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch} from 'react-redux'
 import {createMovie, reset } from '../redux/movie/movieSlice'
+import { toast} from 'react-toastify'
 
 import { Link } from 'react-router-dom'
 
@@ -31,6 +32,7 @@ const CreateMovieForm = () => {
 			name, year, budget, genre
 		}
 		dispatch(createMovie(movieData))
+		toast.success('Added new movie item')
 		navigate('/dashboard')
 
 	}

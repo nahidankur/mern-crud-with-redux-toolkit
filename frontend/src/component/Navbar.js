@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-	<Link to='/' className="navbar-brand">Movie<b>Table</b></Link>  		
+	<Link to='/dashboard' className="navbar-brand">Movie<b>Table</b></Link>  		
 	<button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 		<span className="navbar-toggler-icon"></span>
 	</button>

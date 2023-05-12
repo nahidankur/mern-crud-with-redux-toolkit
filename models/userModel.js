@@ -13,7 +13,6 @@ const userSchema = mongoose.Schema({
         type : String,
         required: [true, 'Please add a strong password']
     }
-    
 }, {
     timestamps: true
 })

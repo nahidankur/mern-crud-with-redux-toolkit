@@ -4,6 +4,7 @@ import './navbar.css'
 import {useSelector, useDispatch } from 'react-redux'
 import {logout, reset } from '../redux/auth/authSlice'
 import {useNavigate } from 'react-router-dom'
+import { toast} from 'react-toastify'
 
 
 
@@ -13,6 +14,7 @@ const Navbar = () => {
 	const {user} = useSelector((state)=> state.auth)
 
 	const onClick = ()=> {
+		toast.success('Logout Successful')
 		dispatch(logout())
 		dispatch(reset())
 		navigate('/')

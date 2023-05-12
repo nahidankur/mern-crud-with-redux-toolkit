@@ -33,9 +33,9 @@ const onSubmit = (e)=> {
 		const userData = {
 			 email, password
 		}
-		dispatch(login(userData))
 		toast.success('Login Successful')
-	  
+		dispatch(login(userData))
+		
 
 }
 
@@ -45,7 +45,9 @@ const onSubmit = (e)=> {
 		}
 		if(isSuccess || user) {
 			navigate('/dashboard')
+			
 		}
+	
 		
 		dispatch(reset())
 	 }, [user, navigate, dispatch, isError, isSuccess,message])

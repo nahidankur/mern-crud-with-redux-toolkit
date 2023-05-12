@@ -56,7 +56,8 @@ const MovieTable = ({movies}) => {
 						</tr>
 								</> )
 							})}
-							</>) : (<></>)
+							</>) : (<>
+							</>)
 						}
 						
 					
@@ -66,8 +67,9 @@ const MovieTable = ({movies}) => {
 				
 				</tbody>
 			</table>
+			{movies.length == 0 && <h2>Click the add button to add new entry</h2>}
 			<div className="clearfix">
-				<div className="hint-text">Showing <b>{movies.length}</b> entries</div>
+				<div className="hint-text">Showing <b>{movies.length}</b> { movies.length > 1 ? 'entries' : 'entry' } </div>
 			
 			</div>
 		</div>

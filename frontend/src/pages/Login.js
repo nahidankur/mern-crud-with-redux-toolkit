@@ -60,7 +60,7 @@ const onSubmit = (e)=> {
 		<div className="signup-form">
 			<form onSubmit={onSubmit} >
 				<h2>Login</h2>
-				<p>Please fill in this form to create an account!</p>
+				<p>Please fill in this form to login!</p>
 				<hr />
 			
 				<div className="form-group">

@@ -18,7 +18,6 @@ app.use('/api/movies', movieRoute)
 app.use(errorHandler)
 
 
-
 __dirname = path.resolve();
 // render deployment
 if (process.env.NODE_ENV === "production") {
